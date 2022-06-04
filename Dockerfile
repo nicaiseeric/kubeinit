@@ -46,7 +46,7 @@ RUN set -x && \
     python3 -m pip install --user --upgrade ansible && \
     python3 -m pip install --user --upgrade shyaml netaddr ipython
 
-COPY --chown=${USER}:0 . .
+COPY --chown=1001:0 . .
 
 RUN set -x && \
     \

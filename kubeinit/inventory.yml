@@ -28,8 +28,10 @@
 hypervisor_hosts:
   hypervisor-01:
     ansible_host: nyctea
-  hypervisor-02:
-    ansible_host: tyto
+    ssh_hostname: nyctea.irex.aretex.ca
+#  hypervisor-02:
+#    ansible_host: tyto
+#    ssh_hostname: tyto.irex.aretex.ca
 
 ###
 # The inventory will have one host identified as the bastion host. By default, this role will
