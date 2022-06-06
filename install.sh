@@ -2,8 +2,7 @@
 set -ev
 
 echo "updating deps ..."
-pip3 install \
-        --upgrade \
+python3 -m pip install --upgrade \
         pip \
         shyaml \
         ansible \

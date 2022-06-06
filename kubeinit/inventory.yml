@@ -27,11 +27,17 @@
 #            ssh_hostname: 192.168.222.202
 hypervisor_hosts:
   hypervisor-01:
-    ansible_host: nyctea
-    ssh_hostname: nyctea.irex.aretex.ca
-#  hypervisor-02:
-#    ansible_host: tyto
-#    ssh_hostname: tyto.irex.aretex.ca
+    ansible_host: goku 
+    ssh_hostname: goku.okd.aretex.ca
+  hypervisor-02:
+    ansible_host: vgeta
+    ssh_hostname: vgeta.okd.aretex.ca
+  hypervisor-03:
+    ansible_host: gohan
+    ssh_hostname: gohan.okd.aretex.ca
+  hypervisor-04:
+    ansible_host: trunk
+    ssh_hostname: trunk.okd.aretex.ca
 
 ###
 # The inventory will have one host identified as the bastion host. By default, this role will
@@ -52,7 +58,8 @@ hypervisor_hosts:
 #            ansible_host: bastion
 bastion_host:
   bastion:
-    target: hypervisor-01
+    ansible_host: kame
+    ssh_hostname: kame.okd.aretex.ca
 
 ###
 # The inventory will have one host identified as the ovn-central host. By default, this role
@@ -90,4 +97,5 @@ ovn_central_host:
 #        ansible_host: 192.168.222.214
 setup_host:
   kubeinit-setup:
-    ansible_host: localhost
+    ansible_host: bubu
+    ssh_hostname: bubu.okd.aretex.ca
