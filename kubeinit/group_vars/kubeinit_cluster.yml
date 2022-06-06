@@ -9,7 +9,8 @@ cluster_name_docsplaceholder: 'the variable cluster_name should be defaulted to 
 
 ###
 # The default for the cluster domain name
-cluster_domain: kubeinit.local
+#cluster_domain: kubeinit.local
+cluster_domain: okd.aretex.ca
 
 ###
 # The default for the hypervisor naming pattern

@@ -19,23 +19,23 @@
 # .. code-block:: yaml
 #
 #    hypervisor_hosts:
-#        goku:
+#        hypervisor-01:
 #            ansible_host: nyctea
 #            ssh_hostname: server1.example.com
-#        vgeta:
+#        hypervisor-02:
 #            ansible_host: tyto
 #            ssh_hostname: 192.168.222.202
 hypervisor_hosts:
-  goku:
+  hypervisor-01:
     ansible_host: goku 
     ssh_hostname: goku.okd.aretex.ca
-  vgeta:
+  hypervisor-02:
     ansible_host: vgeta
     ssh_hostname: vgeta.okd.aretex.ca
-  gohan:
+  hypervisor-03:
     ansible_host: gohan
     ssh_hostname: gohan.okd.aretex.ca
-  trunk:
+  hypervisor-04:
     ansible_host: trunk
     ssh_hostname: trunk.okd.aretex.ca
 
@@ -48,16 +48,16 @@ hypervisor_hosts:
 # .. code-block:: yaml
 #
 #    bastion_host:
-#        kame:
-#            ansible_host: vgeta
+#        bastion:
+#            ansible_host: hypervisor-02
 #
 # .. code-block:: yaml
 #
 #    bastion_host:
-#        kame:
+#        bastion:
 #            ansible_host: bastion
 bastion_host:
-  kame:
+  bastion:
     ansible_host: kame
     ssh_hostname: kame.okd.aretex.ca
 
@@ -69,10 +69,10 @@ bastion_host:
 # .. code-block:: yaml
 #
 #    ovn_central_host:
-#        target: vgeta
+#        target: hypervisor-02
 ovn_central_host:
-  goku:
-    target: goku
+  ovn-central:
+    target: hypervisor-01
     ansible_host: goku
     ssh_hostname: goku.okd.aretex.ca
 
@@ -98,6 +98,6 @@ ovn_central_host:
 #    setup_host:
 #        ansible_host: 192.168.222.214
 setup_host:
-  bubu:
+  kubeinit-setup:
     ansible_host: bubu
     ssh_hostname: bubu.okd.aretex.ca
